@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f6fd;
+    color: #222;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #253568;
+    text-align: center;
+}
+
+h2 {
+    color: #344b87;
+    margin-top: 30px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #00000012;
+}
+
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+caption {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    border: 1px solid #cbd2e1;
+    text-align: left;
+}
+
+thead th {
+    background-color: #344b87;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f3fc;
+}
+
+tbody tr:hover {
+    background-color: #fff1a8;
+}
+
+tfoot {
+    background-color: #e7ecfd;
+    font-weight: bold;
+}
+
+.numero {
+    text-align: right;
+}
+
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+
+.horario table {
+    min-width: 850px;
+    table-layout: fixed;
+}
+
+.horario caption {
+    color: #253568;
+    font-size: 22px;
+    padding: 15px 0;
+}
+
+.horario thead th {
+    background-color: #253568;
+    color: white;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.horario tbody th {
+    background-color: #e7ecfd;
+    color: #253568;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.horario tbody td {
+    text-align: center;
+    vertical-align: middle;
+    height: 45px;
+}
+
+
+.horario .tecnica {
+    background-color: #d8e8ff;
+}
+
+.horario .transversal {
+    background-color: #d9f3e3;
+}
+
+.horario .proyecto {
+    background-color: #fce5c8;
+}
+
+.horario .libre {
+    background-color: #e8def8;
+}
+
+
+.horario .pausa td {
+    background-color: #eeeeee;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+.horario .ambiente {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+
+.horario tbody td:hover {
+    filter: brightness(0.95);
+}
+
+
+.horario tfoot td {
+    text-align: right;
+    font-size: 12px;
+    background-color: #e7ecfd;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
