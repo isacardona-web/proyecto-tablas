@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -28,7 +30,6 @@ section {
     border-radius: 8px;
     box-shadow: 0 2px 6px #00000012;
 }
-
 
 table {
     width: 60%;
@@ -72,15 +73,30 @@ tfoot {
     text-align: right;
 }
 
-
 .tabla-contenedor {
     overflow-x: auto;
 }
 
+/* CAMBIOS EXCLUSIVOS PARA EL HORARIO */
+.horario {
+    box-sizing: border-box;
+    width: calc(100vw - 40px);
+    max-width: 1400px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.horario .tabla-contenedor {
+    width: 100%;
+    overflow-x: hidden;
+}
 
 .horario table {
-    min-width: 850px;
+    width: 100%;
+    min-width: 0;
     table-layout: fixed;
+    border-collapse: collapse;
 }
 
 .horario caption {
@@ -93,24 +109,32 @@ tfoot {
     background-color: #253568;
     color: white;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    position: static;
+    font-size: 13px;
+    overflow-wrap: anywhere;
 }
 
 .horario tbody th {
     background-color: #e7ecfd;
     color: #253568;
-    font-size: 13px;
-    white-space: nowrap;
+    font-size: 12px;
+    white-space: normal;
+}
+
+.horario th,
+.horario td {
+    box-sizing: border-box;
+    padding: 8px 5px;
+    overflow-wrap: anywhere;
+    word-break: normal;
 }
 
 .horario tbody td {
     text-align: center;
     vertical-align: middle;
     height: 45px;
+    font-size: 12px;
 }
-
 
 .horario .tecnica {
     background-color: #d8e8ff;
@@ -128,14 +152,12 @@ tfoot {
     background-color: #e8def8;
 }
 
-
 .horario .pausa td {
     background-color: #eeeeee;
     text-align: center;
     font-style: italic;
     font-weight: bold;
 }
-
 
 .horario .ambiente {
     display: block;
@@ -144,11 +166,9 @@ tfoot {
     color: #666;
 }
 
-
 .horario tbody td:hover {
     filter: brightness(0.95);
 }
-
 
 .horario tfoot td {
     text-align: right;
@@ -156,7 +176,7 @@ tfoot {
     background-color: #e7ecfd;
 }
 
-
+/* PANTALLAS PEQUEÑAS */
 @media (max-width: 600px) {
     body {
         padding: 10px;
@@ -168,5 +188,32 @@ tfoot {
 
     h1 {
         font-size: 26px;
+    }
+
+    .horario {
+        width: calc(100vw - 20px);
+        padding: 10px;
+    }
+
+    .horario caption {
+        font-size: 17px;
+    }
+
+    .horario th,
+    .horario td {
+        padding: 4px 2px;
+    }
+
+    .horario thead th {
+        font-size: 10px;
+    }
+
+    .horario tbody th,
+    .horario tbody td {
+        font-size: 10px;
+    }
+
+    .horario .ambiente {
+        font-size: 9px;
     }
 }
